@@ -1,5 +1,4 @@
 
-
 import math
 
 print("===== CALCULADORA EN PYTHON =====")
@@ -11,15 +10,16 @@ while True:
     print("3. Multiplicación (*)")
     print("4. División (/)")
     print("5. Raíz cuadrada (√)")
-    print("6. Salir")
+    print("6. Potencia (^)")
+    print("7. Salir")
 
     opcion = input("Ingrese una opción: ")
 
-    if opcion == "6":
+    if opcion == "7":
         print("Gracias por usar la calculadora.")
         break
 
-    if opcion in ["1", "2", "3", "4"]:
+    if opcion in ["1", "2", "3", "4", "6"]:
         num1 = float(input("Ingrese el primer número: "))
         num2 = float(input("Ingrese el segundo número: "))
 
@@ -42,6 +42,10 @@ while True:
             else:
                 print("Error: No se puede dividir entre cero.")
 
+        elif opcion == "6":
+            resultado = num1 ** num2
+            print("Resultado:", resultado)
+
     elif opcion == "5":
         num1 = float(input("Ingrese el número: "))
 
@@ -53,3 +57,4 @@ while True:
 
     else:
         print("Opción no válida. Intente nuevamente.")
+
