@@ -1,4 +1,7 @@
 
+
+import math
+
 print("===== CALCULADORA EN PYTHON =====")
 
 while True:
@@ -7,11 +10,12 @@ while True:
     print("2. Resta (-)")
     print("3. Multiplicación (*)")
     print("4. División (/)")
-    print("5. Salir")
+    print("5. Raíz cuadrada (√)")
+    print("6. Salir")
 
     opcion = input("Ingrese una opción: ")
 
-    if opcion == "5":
+    if opcion == "6":
         print("Gracias por usar la calculadora.")
         break
 
@@ -37,6 +41,15 @@ while True:
                 print("Resultado:", resultado)
             else:
                 print("Error: No se puede dividir entre cero.")
+
+    elif opcion == "5":
+        num1 = float(input("Ingrese el número: "))
+
+        if num1 >= 0:
+            resultado = math.sqrt(num1)
+            print("Raíz cuadrada:", resultado)
+        else:
+            print("Error: No se puede calcular la raíz cuadrada de un número negativo.")
 
     else:
         print("Opción no válida. Intente nuevamente.")
