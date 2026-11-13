@@ -11,15 +11,16 @@ while True:
     print("4. División (/)")
     print("5. Raíz cuadrada (√)")
     print("6. Potencia (^)")
-    print("7. Salir")
+    print("7. Porcentaje (%)")
+    print("8. Salir")
 
     opcion = input("Ingrese una opción: ")
 
-    if opcion == "7":
+    if opcion == "8":
         print("Gracias por usar la calculadora.")
         break
 
-    if opcion in ["1", "2", "3", "4", "6"]:
+    if opcion in ["1", "2", "3", "4", "6", "7"]:
         num1 = float(input("Ingrese el primer número: "))
         num2 = float(input("Ingrese el segundo número: "))
 
@@ -46,6 +47,10 @@ while True:
             resultado = num1 ** num2
             print("Resultado:", resultado)
 
+        elif opcion == "7":
+            resultado = (num1 * num2) / 100
+            print("Porcentaje:", resultado)
+
     elif opcion == "5":
         num1 = float(input("Ingrese el número: "))
 
@@ -57,4 +62,6 @@ while True:
 
     else:
         print("Opción no válida. Intente nuevamente.")
+
+
 
